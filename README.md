@@ -47,7 +47,6 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 * sealed classes
 * switch / when
 * Listen
-* ?: elvis operator und guard pattern
 * test
   * mockk
   * kotest

@@ -19,6 +19,8 @@ val person = Person(name = " Hans ", age = 27, geschlecht = Geschlecht.M)
 
 # Sealed Classes und switch (when)
 
+Eigentlich wie Java nur besser
+
 ```kotlin
 sealed class Result
 class Created(val person: Person) : Result()
@@ -64,6 +66,8 @@ listOf(
 ```
 
 # Listen
+
+Eigentlich wie Java nur kürzer.
 
 ```kotlin
 listOf(
