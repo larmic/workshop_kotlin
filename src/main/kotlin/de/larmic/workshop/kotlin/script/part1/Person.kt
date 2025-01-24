@@ -1,8 +1,6 @@
 package de.larmic.workshop.kotlin.script.part1
 
-enum class Geschlecht {
-    M, W, D
-}
+enum class Geschlecht { M, W, D }
 
 data class Person(val name: String,
                   val age: Int,
