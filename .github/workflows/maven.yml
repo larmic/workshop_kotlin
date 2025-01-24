@@ -3,24 +3,46 @@
 
 name: Java CI with Maven
 
-on: [push, pull_request]
+on:
+    push:
+        branches:
+            - main  # Nur auf Pushes zur Hauptbranche
+    pull_request:
+        branches:
+            - main  # Nur für Pull-Requests zu Main
 
 jobs:
-  properties:
-    runs-on: ubuntu-latest
+    properties:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        java: [ 21 ]
-        distribution: [ 'temurin' ]
+        strategy:
+            matrix:
+                java: [ 21 ]
+                distribution: [ 'temurin' ]
 
-    name: Java ${{ matrix.java }} compile
+        name: Build and Test Java ${{ matrix.java }} on ${{ matrix.distribution }}
 
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup java ${{ matrix.java }}
-        uses: actions/setup-java@v4
-        with:
-          distribution: ${{ matrix.distribution }}
-          java-version: ${{ matrix.java }}
-      - run: mvn clean test
+        steps:
+            # Schritt 1: Code aus dem Repository auschecken
+            -   name: Checkout Repository
+                uses: actions/checkout@v4
+
+            # Schritt 2: Java JDK Setup
+            -   name: Setup java ${{ matrix.java }}
+                uses: actions/setup-java@v4
+                with:
+                    distribution: ${{ matrix.distribution }}
+                    java-version: ${{ matrix.java }}
+
+            # Schritt 3: Cache Maven-Abhängigkeiten
+            -   name: Cache Maven dependencies
+                uses: actions/cache@v3
+                with:
+                    path: ~/.m2/repository
+                    key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}  # Cache-Key basiert auf pom.xml
+                    restore-keys: |
+                        ${{ runner.os }}-maven-
+
+            # Schritt 4: Maven Clean und Test ausführen
+            -   name: Run Maven Clean and Test
+                run: mvn clean test
