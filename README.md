@@ -65,7 +65,6 @@ Idee: Service zum Speichern von Adressen mit Prüfung auf Duplikate?
 ### Part 6
 
 Im Ausblick für einen weiteren Schulungsslot
-* let, apply
 * lateinit
 * dsl
 * nachteile

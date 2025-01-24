@@ -1,6 +1,6 @@
 # Extension functions
 
-Weiter mit der [Person](src/main/kotlin/de/larmic/workshop/kotlin/script/part1/Person.kt)
+Weiter mit der [Person](../src/main/kotlin/de/larmic/workshop/kotlin/script/part1/Person.kt)
 
 ```kotlin
 private fun Int.isAge() = this in 0..100
@@ -45,3 +45,35 @@ when (val result = Person(name = "  ", age = -1, geschlecht = Geschlecht.M)) {
 }
 ```
 
+# Testfactories
+
+```kotlin
+fun createPerson(name: String = "Sarah",
+                 age: Int = 98,
+                 geschlecht: Geschlecht = Geschlecht.W)
+= Person(name = name, age = age, geschlecht = geschlecht)
+
+// main
+listOf(
+    createPerson(),
+    createPerson(name = "Thomas", geschlecht = Geschlecht.M),
+    createPerson(name = "Hans", age = 19, geschlecht = Geschlecht.M),
+    createPerson(name = "Noah", age = 10, geschlecht = Geschlecht.M),
+    createPerson(name = "invalid", age = -10, geschlecht = Geschlecht.D)
+)
+```
+
+# Listen
+
+```kotlin
+listOf(
+        createPerson(),
+        createPerson(name = "Thomas", geschlecht = Geschlecht.M),
+        createPerson(name = "Hans", age = 19, geschlecht = Geschlecht.M),
+        createPerson(name = "Noah", age = 10, geschlecht = Geschlecht.M),
+        createPerson(name = "invalid", age = -10, geschlecht = Geschlecht.D)
+    ).filterIsInstance<Created>() // -> hier dann map {it.person} einfügen
+        .filter { it.person.age > 18 }
+        .filter { it.person.geschlecht == Geschlecht.M }
+        .forEach { println(it.person.readablePerson()) }
+```
