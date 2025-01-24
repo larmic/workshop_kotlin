@@ -71,11 +71,21 @@
                              -Xjsr305=ignore    -> Der Compiler ignoriert die Annotationen
                             -->
                         <arg>-Xjsr305=strict</arg>
+                        <!-- Vor Kotlin 2.0 hat eine data-class mit private constructor die Methoden
+                             equals(), hashcode() und copy() trotzdem freigegeben. Mit Version 2.0 ist
+                             dies immer noch aus Kompatibilitätsgründen so, wird aber mit 2.2 deaktiviert.
+                             Um das Verhalten von 2.2 schon zu garantieren, gibt es das
+                             Flag 'consistent-data-class-copy-visibility'.
+
+                             Siehe https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-consistent-copy-visibility/
+                            -->
+                        <arg>-Xconsistent-data-class-copy-visibility</arg>
                     </args>
                 </configuration>
             </plugin>
-            <!-- Wird hier benötigt, ein ausführbares Jar zu erzeugen. Spring Boot und Quarkus haben eigene
-                 Lösungen hierfür parat und dieser Bereich dient nur für dieses Beispiel.
+            <!-- Wird hier benötigt, ein ausführbares Jar zu erzeugen. Spring Boot und Quarkus haben dafür eigene
+                 Lösungen parat und dieser Bereich dient explizit für dieses Beispiel und wird selten in dieser
+                 Form benötigt.
                 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

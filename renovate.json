@@ -1,0 +1,18 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended"
+    ],
+    "labels": ["update"],
+    "dependencyDashboardTitle": "[Kotlin Workshop] Dependency Dashboard",
+    "dependencyDashboardAutoclose": true,
+    "dependencyDashboardLabels": ["update","documentation"],
+    "packageRules": [
+        {
+            "matchUpdateTypes": ["minor", "patch", "digest"],
+            "matchCurrentVersion": "!/^0/",
+            "automerge": true,
+            "automergeType": "branch"
+        }
+    ]
+}

@@ -44,8 +44,9 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
   * Sichtbarkeiten
   * gerne für mappings .mapToDomain(), .mapToDto(), .mapToEntity()
 * invoke-functions
-* Listen
+* sealed classes
 * switch
+* Listen
 * ?: elvis operator und guard pattern
 * test
   * mockk
@@ -58,6 +59,8 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 
 Neue Story wird vorgestellt und in kleinen Gruppen umgesetzt.
 Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
+
+Idee: Service zum Speichern von Adressen mit Prüfung auf Duplikate?
 
 ### Part 6
 

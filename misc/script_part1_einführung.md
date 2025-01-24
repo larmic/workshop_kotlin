@@ -49,7 +49,8 @@ println("p1 is equal to p2: ${p1.equals(p2)}")  // -> false
 println("p1 is equal to p2: ${p1 == p2}")       // -> false
 ```
 
--> data classes (toString(), equals, hashcode)
+-> data classes (toString(), equals, hashcode, copy())
+-> zeige copy-function
 
 # Validierung mit init-Block
 
