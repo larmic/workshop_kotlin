@@ -41,7 +41,7 @@ jobs:
 
             # Schritt 3: Cache Maven-Abhängigkeiten
             -   name: Cache Maven dependencies
-                uses: actions/cache@v3
+                uses: actions/cache@v4
                 with:
                     path: ~/.m2/repository
                     key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}  # Cache-Key basiert auf pom.xml
