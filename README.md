@@ -22,8 +22,12 @@ Vortrag _Storytime - von Java zu Kotlin_
 * init {}
 * default values
 * multiline-strings
+* named parameters
+* direct return
 
 [Hier](misc/script_part1_einführung.md) befinden sich die Notizen für den Vortragenden.
+[Und hier](src/main/kotlin/de/larmic/workshop/kotlin/script/part1/Person.kt) findest
+Du die Umsetzung der Einführung.
 
 ### Part 3 - Selbst arbeiten
 
@@ -31,6 +35,8 @@ Die Story wird vorgestellt und dann in kleinen Gruppen umgesetzt.
 Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 
 *Frage*: Auf wie viele Zeilen Code kommen wir jetzt?
+
+[Eine Musterlösung](src/main/kotlin/de/larmic/workshop/kotlin/muster/part1/Address.kt).  
 
 ### Part 4 - tiefere Kotlin-Features
 
