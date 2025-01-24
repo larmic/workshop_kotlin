@@ -6,7 +6,6 @@
     "labels": ["update"],
     "dependencyDashboardTitle": "[Kotlin Workshop] Dependency Dashboard",
     "dependencyDashboardAutoclose": true,
-    "dependencyDashboardLabels": ["update","documentation"],
     "packageRules": [
         {
             "matchUpdateTypes": ["minor", "patch", "digest"],
