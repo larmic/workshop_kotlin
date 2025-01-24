@@ -45,7 +45,7 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
   * gerne für mappings .mapToDomain(), .mapToDto(), .mapToEntity()
 * invoke-functions
 * sealed classes
-* switch
+* switch / when
 * Listen
 * ?: elvis operator und guard pattern
 * test
