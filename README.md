@@ -48,7 +48,7 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 * switch / when
 * Listen
 * test
-  * mockk
+  * mockk (spring)
   * kotest
   * Best-Practise: test factories
 

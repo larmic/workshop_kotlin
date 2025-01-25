@@ -81,3 +81,5 @@ listOf(
         .filter { it.person.geschlecht == Geschlecht.M }
         .forEach { println(it.person.readablePerson()) }
 ```
+
+# Tests (kotest, mockk)

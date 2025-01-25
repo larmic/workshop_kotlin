@@ -15,7 +15,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>2.1.0</kotlin.version>
         <kotlin.code.style>official</kotlin.code.style>
+
         <junit.version>5.11.4</junit.version>
+        <mockk.version>1.13.16</mockk.version>
+        <kotest.version>5.9.1</kotest.version>
     </properties>
 
     <dependencies>
@@ -29,6 +32,38 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--
+            Kotest ist eine Alternative zu JUnit und speziell für Kotlin geschrieben.
+            Vorteil JUnit: weit verbreitet und funktioniert wunderbar mit Kotlin
+            Vorteil Kotest: spezielle Kotlin DSL Syntax
+            In diesem Projekt werden nur die Assertions als Alternative zu AssertJ
+            eingesetzt.
+            siehe: https://kotest.io/
+           -->
+        <dependency>
+            <groupId>io.kotest</groupId>
+            <artifactId>kotest-assertions-core-jvm</artifactId>
+            <version>${kotest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- kotlin mocking framework
+             siehe: https://mockk.io/
+            -->
+        <dependency>
+            <groupId>io.mockk</groupId>
+            <artifactId>mockk-jvm</artifactId>
+            <version>${mockk.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- springmockk ist eine Spring Boot Mockk integration
+             siehe: https://github.com/Ninja-Squad/springmockk
+            -->
+        <!--dependency>
+            <groupId>com.ninja-squad</groupId>
+            <artifactId>springmockk</artifactId>
+            <version>4.0.2</version>
+            <scope>test</scope>
+        </dependency-->
     </dependencies>
 
     <build>
