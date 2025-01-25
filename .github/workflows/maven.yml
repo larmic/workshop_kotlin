@@ -9,11 +9,13 @@ on:
             - main  # Nur auf Pushes zur Hauptbranche
         paths-ignore:
             - 'misc/**'
+            - 'readme.md'
     pull_request:
         branches:
             - main  # Nur für Pull-Requests zu Main
         paths-ignore:
             - 'misc/**'
+            - 'readme.md'
 
 jobs:
     properties:
