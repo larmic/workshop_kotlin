@@ -1,3 +1,10 @@
+[![Java CI with Maven](https://github.com/larmic/workshop_kotlin/actions/workflows/maven.yml/badge.svg)](https://github.com/larmic/workshop_kotlin/actions/workflows/maven.yml)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.1-blue)](https://kotlinlang.org)
+[![Maven](https://img.shields.io/badge/Maven-3.9.9-blue)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
+
 # workshop_kotlin
 
 Die Folien zu diesem Training befinden sich [hier](misc/folien.pdf).
