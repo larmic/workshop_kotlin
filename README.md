@@ -1,7 +1,12 @@
 # workshop_kotlin
 
-Hilfe zu Maven: https://kotlinlang.org/docs/maven.html  
-Spring initializr bringt alles mit: https://start.spring.io/
+Die Folien zu diesem Training befinden sich [hier](misc/folien.pdf).
+
+Generelle Hilfe zu Kotlin und Maven: https://kotlinlang.org/docs/maven.html  
+Spring initializr bringt alles für Kotlin mit: https://start.spring.io/
+
+## Requirements
+* Java 21 oder höher
 
 ## Agenda
 
