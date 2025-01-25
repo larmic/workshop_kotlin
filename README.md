@@ -59,7 +59,7 @@ Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 
 [Hier](misc/script_part4_deeper.md) befinden sich die Notizen für den Vortragenden.
 
-### Part 5
+### Part 5 - Selbst arbeiten
 
 Neue Story wird vorgestellt und in kleinen Gruppen umgesetzt.
 Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
