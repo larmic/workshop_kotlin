@@ -10,7 +10,7 @@ zusätzliche Notizen.
 
 ### Part 1 - Einfach nur zuhören
 
-Vortrag _Storytime - von Java zu Kotlin_
+Teaser _Storytime_
 
 ### Part 2 - Einführung in die Basics
 
