@@ -104,3 +104,55 @@ fun `invalid ages`(age: Int) {
     }
 }
 ```
+
+# Test mockk
+
+Vorbereitung
+
+```kotlin
+class PersonRepository(private val persons: MutableList<Person> = mutableListOf()) {
+
+    fun save(person: Person) : Person {
+        persons.add(person)
+        return person
+    }
+}
+
+class PersonService(private val personRepository: PersonRepository = PersonRepository()) {
+
+    fun save(person: Person) {
+        personRepository.save(person)
+    }
+}
+```
+
+Test ausführen und Fehler analysieren
+
+```kotlin
+class PersonServiceTest {
+
+    private val personRepositoryMock = mockk<PersonRepository>()
+    private val service = PersonService(personRepositoryMock)
+
+    @Test
+    fun `save a person`() {
+        val person = (Person(name = "John", age = 37) as Created).person
+
+        service.save(person = person)
+    }
+}
+```
+
+Fehler korrigieren
+```kotlin
+@Test
+fun `save a person`() {
+    val person = (Person(name = "John", age = 37) as Created).person
+
+    every { personRepositoryMock.save(person) } returns person
+
+    service.save(person = person)
+
+    verify(atLeast = 1, atMost = 1) { personRepositoryMock.save(person) }
+}
+```
