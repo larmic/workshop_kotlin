@@ -19,7 +19,7 @@ data class Person private constructor(
             }
 
             return if (errors.isNotEmpty()) NotCreated(errors)
-            else Created(Person(name = name.trimIndent(), age = age, geschlecht = geschlecht))
+            else Created(Person(name = name.trim(), age = age, geschlecht = geschlecht))
         }
     }
 

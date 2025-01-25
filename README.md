@@ -1,6 +1,6 @@
 # workshop_kotlin
 
-Hilfe zu Maven: https://kotlinlang.org/docs/maven.html
+Hilfe zu Maven: https://kotlinlang.org/docs/maven.html  
 Spring initializr bringt alles mit: https://start.spring.io/
 
 ## Agenda
@@ -25,7 +25,7 @@ Vortrag _Storytime - von Java zu Kotlin_
 * named parameters
 * direct return
 
-[Hier](misc/script_part1_einführung.md) befinden sich die Notizen für den Vortragenden.
+[Hier](misc/script_part1_einführung.md) befinden sich die Notizen für den Vortragenden.  
 [Und hier](src/main/kotlin/de/larmic/workshop/kotlin/script/part1/Person.kt) findest
 Du die Umsetzung der Einführung.
 

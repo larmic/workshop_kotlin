@@ -37,7 +37,7 @@ operator fun invoke(
     }
 
     return if (errors.isNotEmpty()) NotCreated(errors)
-    else Created(Person(name = name.trimIndent(), age = age, geschlecht = geschlecht))
+    else Created(Person(name = name.trim(), age = age, geschlecht = geschlecht))
 }
 
 // main
@@ -82,4 +82,25 @@ listOf(
         .forEach { println(it.person.readablePerson()) }
 ```
 
-# Tests (kotest, mockk)
+# Tests kotest
+
+```kotlin
+@ParameterizedTest
+@ValueSource(strings = ["John", " John ", "    John    "])
+fun `trim name`(name: String) {
+    Person(name = name, age = 10).let {
+        it.shouldBeInstanceOf<Created>() // auto cast
+        it.person.name shouldBe "John"
+        it.person.age shouldBe 10
+    }
+}
+
+@ParameterizedTest
+@ValueSource(ints = [-1, 101])
+fun `invalid ages`(age: Int) {
+    Person(name = "John", age = age).let {
+        it.shouldBeInstanceOf<NotCreated>()
+        it.errors.shouldContainOnly("Age must be between 0 and 100")
+    }
+}
+```
