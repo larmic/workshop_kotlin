@@ -10,7 +10,7 @@ Spring initializr bringt alles für Kotlin mit: https://start.spring.io/
 
 ## Agenda
 
-Die eigentliche Agenda geht aus den Folien hervor. Hier befinden sich
+Die eigentliche Agenda geht aus den [Folien](misc/folien.pdf) hervor. Hier befinden sich
 zusätzliche Notizen.
 
 ### Part 1 - Einfach nur zuhören
@@ -65,6 +65,8 @@ Neue Story wird vorgestellt und in kleinen Gruppen umgesetzt.
 Einzelne Gruppen stellen dann ihre Lösung vor und wir disktutieren gemeinsam.
 
 Idee: Service zum Speichern von Adressen mit Prüfung auf Duplikate?
+
+[Eine Musterlösung](src/main/kotlin/de/larmic/workshop/kotlin/muster/part2/Address.kt).
 
 ### Part 6
 
