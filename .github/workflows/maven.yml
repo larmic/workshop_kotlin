@@ -7,9 +7,13 @@ on:
     push:
         branches:
             - main  # Nur auf Pushes zur Hauptbranche
+        paths-ignore:
+            - 'misc/**'
     pull_request:
         branches:
             - main  # Nur für Pull-Requests zu Main
+        paths-ignore:
+            - 'misc/**'
 
 jobs:
     properties:
