@@ -17,7 +17,7 @@
         <kotlin.code.style>official</kotlin.code.style>
 
         <junit.version>5.13.1</junit.version>
-        <mockk.version>1.14.2</mockk.version>
+        <mockk.version>1.14.4</mockk.version>
         <kotest.version>5.9.1</kotest.version>
     </properties>
 
