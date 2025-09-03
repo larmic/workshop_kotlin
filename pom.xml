@@ -18,7 +18,7 @@
 
         <junit.version>5.13.4</junit.version>
         <mockk.version>1.14.5</mockk.version>
-        <kotest.version>5.9.1</kotest.version>
+        <kotest.version>6.0.1</kotest.version>
     </properties>
 
     <dependencies>
