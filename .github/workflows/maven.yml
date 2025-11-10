@@ -36,7 +36,7 @@ jobs:
         steps:
             # Schritt 1: Code aus dem Repository auschecken
             -   name: Checkout Repository
-                uses: actions/checkout@v4
+                uses: actions/checkout@v5
 
             # Schritt 2: Java JDK Setup
             -   name: Setup java ${{ matrix.java }}
